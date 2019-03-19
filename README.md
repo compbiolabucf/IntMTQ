@@ -23,12 +23,12 @@ $ conda install -c cvxgrp cvxpy
 ## Prepare RNA-Seq data
 [TopHat] is applied to do RNA-Seq short read alignment. With the aligned Bam files and hg19 annotation, we can run the below command to generate q matrix (read counts table).
 ```sh
-$ python read_counts.py
+$ python read_counts.py bamfile hg19_2018June18 
 ```
 
 ## Run IntMTQ with NanoString platform integrated
 ```sh
-$ python IntMTQ.py
+$ python IntMTQ.py NanoStringData.xlsx GeneName_NanoString.txt 
 ```
 `IntMTQ.py` will load RNA-Seq data (obtained from RNA-Seq data preparation), NanoString data (**NanoStringData.xlsx** and **GeneName_NanoString.txt**). An excel file **E1_expression.xlsx** will be generated as output which contains the isoform expressions estimated by IntMTQ.       
 
