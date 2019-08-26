@@ -120,7 +120,7 @@ def E1(G_NanoString,CellLine_NanoString,TransExpre_NanoString):
 				q[q>0] = 1
 				L = np.asarray(TranscriptLength_RNASeq[ixx1])
 				maxiter = 1000
-				lambd = 3000
+				lambd = 1000
 				P, Expression = Penalized_EM(q,s,L,maxiter,E,lambd)
 				for e in Expression:
 					Data[i].append(e)
